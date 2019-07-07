@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/republicanV/node#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
