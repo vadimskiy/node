@@ -20,7 +20,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.post('/users', function (req, res, next) {
+app.post('/users', (req, res, next) => {
     const user = req.body;
     
     pool.connect((err, client, done) => {
@@ -42,8 +42,8 @@ app.post('/users', function (req, res, next) {
     });
 });
 
-app.get('/users', function (req, res, next) {
-    pool.connect(function (err, client, done) {
+app.get('/users', (req, res, next) => {
+    pool.connect((err, client, done) => {
       if (err) {
         // Передача ошибки в обработчик express
         return next(err);
